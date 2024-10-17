@@ -107,7 +107,7 @@ void CDVDSubtitlesLibass::Configure()
                                     XFILE::DIR_FLAG_NO_FILE_DIRS | XFILE::DIR_FLAG_NO_FILE_INFO);
   }
   
-  bool overrideFont = settings->GetBool(CSettings::SETTING_SUBTITLES_OVERRIDEFONTS);
+  const bool overrideFont = settings->GetBool(CSettings::SETTING_SUBTITLES_OVERRIDEFONTS);
   // Get temporary fonts
   if (!overrideFont && XFILE::CDirectory::Exists(FONT::FONTPATH::TEMP, false))
   {
